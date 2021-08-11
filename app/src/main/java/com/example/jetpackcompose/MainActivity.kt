@@ -18,7 +18,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.startActivity
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,20 +25,23 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             //JetpackComposeTheme {
-            AppTheme {
+            //AppTheme {
                 // A surface container using the 'background' color from the theme
                 //Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                    Divider(color = Color.Black)
-                    Greeting("Android2")
-                    Divider(color = Color.Black)
-                    Greeting("Android3")
-                    Divider(color = Color.Black)
-                    ButtonToast()
-                    Divider(color = Color.Black)
-                    ButtonRedirect()
+                    Column() {
+                        Greeting("Android")
+                        Divider(color = Color.Black)
+                        Greeting("Android2")
+                        Divider(color = Color.Black)
+                        Greeting("Android3")
+                        Divider(color = Color.Black)
+                        ButtonToast()
+                        Divider(color = Color.Black)
+                        ButtonRedirect()
+                    }
+
                 //}
-            }
+           // }
         }
     }
 }
@@ -68,7 +70,6 @@ fun Msj(){
     AppTheme() {
         Text(text = "Hola 22", fontSize = size)
     }
-
 }
 
 @Composable
