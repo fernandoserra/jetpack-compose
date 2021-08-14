@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import com.example.jetpackcompose.accompanist.Pager
 import com.example.jetpackcompose.accompanist.Pager2
 import com.example.jetpackcompose.ui.theme.HorizontalScroll
+import com.example.jetpackcompose.ui.theme.HorizontalScrollImagen
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 import com.google.accompanist.pager.ExperimentalPagerApi
 
@@ -49,11 +50,11 @@ class MainActivity : ComponentActivity() {
                         //HorizontalScroll()
                         //Pager()
                         Divider(color = Color.Black)*/
-                        Pager2()
+                        //Pager2()
+
+                        HorizontalScrollImagen()
+
                      }
-
-
-
                 //}
            // }
         }

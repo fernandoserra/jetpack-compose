@@ -7,11 +7,14 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcompose.R
+import com.example.jetpackcompose.data.Gallery
+import com.example.jetpackcompose.utils.LoadImageUrl
 
 fun listImages()= mutableListOf(
     R.drawable.polynesia,
@@ -32,6 +35,31 @@ fun HorizontalScroll(){
                     .height(300.dp)
                     .fillParentMaxWidth()
                )
+        }
+    }
+}
+
+
+@Composable
+fun HorizontalScrollImagen(){
+    val gallery=Gallery()
+    LazyRow(
+        modifier = Modifier.fillMaxSize()){
+        itemsIndexed(items = gallery.listGallery()){index,item->
+
+            val imagen = LoadImageUrl(item.url).value
+
+            imagen?.let {img->
+                Image(
+                    bitmap=img.asImageBitmap(),
+                    contentDescription = "Naturaleza",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .height(300.dp)
+                        .fillParentMaxWidth()
+                )
+            }
+
         }
     }
 }
