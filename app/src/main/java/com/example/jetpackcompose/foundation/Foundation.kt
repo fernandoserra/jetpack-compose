@@ -1,9 +1,15 @@
 package com.example.jetpackcompose.foundation
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetpackcompose.R
 
@@ -12,7 +18,7 @@ import com.example.jetpackcompose.R
  * */
 
 @Composable
-fun Canvas(){
+fun CanvasDemo(){
 
 }
 
@@ -29,26 +35,48 @@ fun PreviewImageDemo(){
 }
 
 @Composable
-fun LazyColumn(){
+fun LazyColumnDemo(){
 
 }
 
 @Composable
-fun LazyRow(){
+fun LazyRowDemo(){
 
 }
 
 @Composable
-fun LazyVerticalGrid(){
+fun LazyVerticalGridDemo(){
 
 }
 
 @Composable
-fun Shape(){
+fun ShapeDemo(){
 
 }
 
 @Composable
-fun Text(){
+fun TextDemo(){
+    Column {
+        Text("Hola mundo")
+        Text("Hola mundo cursiva" , style = TextStyle(fontFamily = FontFamily.Cursive))
 
+        Text(
+            text = "Hola mundo underline, linethrough and bold",
+            style = TextStyle(
+                textDecoration = TextDecoration.combine(
+                    listOf(
+                        TextDecoration.Underline,
+                        TextDecoration.LineThrough
+                    )
+                ), fontWeight = FontWeight.Bold
+            )
+        )
+    }
+
+}
+
+@Preview (showBackground = true)
+@Composable
+fun PreviewTextDemo(){
+    TextDemo()
 }
