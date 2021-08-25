@@ -59,7 +59,6 @@ fun TextDemo(){
     Column {
         Text("Hola mundo")
         Text("Hola mundo cursiva" , style = TextStyle(fontFamily = FontFamily.Cursive))
-
         Text(
             text = "Hola mundo underline, linethrough and bold",
             style = TextStyle(
