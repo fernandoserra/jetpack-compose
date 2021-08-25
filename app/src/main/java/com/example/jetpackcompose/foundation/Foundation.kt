@@ -1,6 +1,11 @@
 package com.example.jetpackcompose.foundation
 
+import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.jetpackcompose.R
 
 /**
  * Link examples: https://foso.github.io/Jetpack-Compose-Playground/#foundation
@@ -12,8 +17,15 @@ fun Canvas(){
 }
 
 @Composable
-fun Image(){
+fun ImageDemo(){
+    val image: Painter = painterResource(id = R.drawable.polynesia)
+    Image(painter = image,contentDescription = "")
+}
 
+@Preview
+@Composable
+fun PreviewImageDemo(){
+    ImageDemo()
 }
 
 @Composable
