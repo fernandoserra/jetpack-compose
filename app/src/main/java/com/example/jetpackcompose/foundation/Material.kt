@@ -3,6 +3,7 @@ package com.example.jetpackcompose.foundation
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -15,9 +16,14 @@ import com.example.jetpackcompose.data.Datos
 
 @Composable
 fun CardDemo(data: Datos){
-    Card(modifier=Modifier.fillMaxWidth(),elevation = 5.dp)
+    Card(
+        shape = RoundedCornerShape(8.dp),
+        modifier=Modifier
+            .fillMaxWidth()
+            .padding(15.dp),
+        elevation = 10.dp)
     {
-        Column(modifier = Modifier.padding(10.dp)) {
+        Column(modifier = Modifier.padding(15.dp)) {
             Text(text = data.titulo)
         }
     }

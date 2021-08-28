@@ -3,6 +3,8 @@ package com.example.jetpackcompose.foundation
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,6 +26,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcompose.R
+import com.example.jetpackcompose.data.Datos
 
 /**
  * Link examples: https://foso.github.io/Jetpack-Compose-Playground/#foundation
@@ -46,10 +49,27 @@ fun PreviewImageDemo(){
     ImageDemo()
 }
 
+/**
+ * Una LazyColumn es una lista de desplazamiento vertical que solo compone y presenta
+ * los elementos visibles actualmente. Es similar a un Recyclerview
+ * en el sistema clásico de Android View.
+ * */
 @Composable
-fun LazyColumnDemo(){
-
+fun LazyColumnDemo(dataList:List<Datos>){
+    LazyColumn(modifier = Modifier.fillMaxHeight()){
+        itemsIndexed(items = dataList){ index, item ->
+            CardDemo(data = item)
+        }
+    }
 }
+
+@Preview
+@Composable
+fun PrevioewLazyColumnDemo(){
+    val datos = Datos()
+    LazyColumnDemo(dataList = datos.listData())
+}
+
 
 @Composable
 fun LazyRowDemo(){

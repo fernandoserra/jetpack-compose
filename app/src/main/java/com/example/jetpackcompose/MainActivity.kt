@@ -52,7 +52,10 @@ class MainActivity : ComponentActivity() {
                         Divider(color = Color.Black)*/
                         //Pager2()
 
-                        HorizontalScrollImagen()
+                        //HorizontalScrollImagen()
+
+                        Divider(color = Color.Black)
+                        ButtonRedirect()
 
                      }
                 //}
