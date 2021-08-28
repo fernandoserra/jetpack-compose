@@ -1,14 +1,14 @@
 package com.example.jetpackcompose.foundation
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Card
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -23,9 +23,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.jetpackcompose.R
 import com.example.jetpackcompose.data.Datos
 
@@ -93,9 +95,45 @@ fun PreviewLazyRowDemo(){
     LazyRowDemo(dataList = datos.listData() )
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun LazyVerticalGridDemo(){
+fun LazyVerticalGridDemo(dataList: List<Datos>){
 
+    LazyVerticalGrid(
+        cells = GridCells.Adaptive(128.dp),
+
+        // content padding
+        contentPadding = PaddingValues(
+            start = 12.dp,
+            top = 16.dp,
+            end = 12.dp,
+            bottom = 16.dp
+        ),
+        content = {
+            items(dataList.size) { index ->
+                Card(
+                    backgroundColor = Color.Cyan,
+                    modifier = Modifier
+                        .padding(4.dp)
+                        .fillMaxWidth(),
+                    elevation = 8.dp,
+                ) {
+                    Text(
+                        text = dataList[index].titulo,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(16.dp))
+                }
+            }
+        }
+    )
+}
+
+@Preview (showBackground = true)
+@Composable
+fun PreviewLazyVerticalGridDemo(){
+    val datos = Datos()
+    LazyVerticalGridDemo(dataList = datos.listData())
 }
 
 @Composable
