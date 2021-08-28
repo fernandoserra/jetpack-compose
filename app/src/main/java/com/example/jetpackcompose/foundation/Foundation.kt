@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CutCornerShape
@@ -71,9 +72,25 @@ fun PrevioewLazyColumnDemo(){
 }
 
 
+/**
+ * Un LazyRow es una lista de desplazamiento horizontal que solo
+ * compone y presenta los elementos visibles actualmente.
+ * Es similar a un Recyclerview horizontal en el sistema clásico de vista de Android.
+ * */
 @Composable
-fun LazyRowDemo(){
+fun LazyRowDemo(dataList: List<Datos>){
+    LazyRow(modifier = Modifier.fillMaxWidth()){
+        itemsIndexed(dataList){index, item ->
+            CardDemo(data = item)
+        }
+    }
+}
 
+@Preview(showBackground = true)
+@Composable
+fun PreviewLazyRowDemo(){
+    val datos = Datos()
+    LazyRowDemo(dataList = datos.listData() )
 }
 
 @Composable
