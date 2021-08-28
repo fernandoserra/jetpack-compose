@@ -72,7 +72,6 @@ fun ShapeDemo(){
         Spacer(modifier = Modifier.height(10.dp))
         TypeShape(shape = CutCornerShape(10.dp))
     }
-
 }
 
 @Composable
