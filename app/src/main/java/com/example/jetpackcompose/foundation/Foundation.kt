@@ -1,5 +1,6 @@
 package com.example.jetpackcompose.foundation
 
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
@@ -37,7 +39,15 @@ import com.example.jetpackcompose.data.Datos
 
 @Composable
 fun CanvasDemo(){
+    Canvas(modifier = Modifier.fillMaxSize()) {
+        drawCircle(Color.Blue, center = Offset(50f, 200f), radius = 40f)
+    }
+}
 
+@Preview
+@Composable
+fun PreviewCanvasDemo(){
+    CanvasDemo()
 }
 
 @Composable
