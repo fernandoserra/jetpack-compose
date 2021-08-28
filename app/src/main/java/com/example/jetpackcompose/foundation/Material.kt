@@ -15,6 +15,21 @@ import com.example.jetpackcompose.data.Datos
 
 
 @Composable
+fun AlertDialogDemo(){
+
+}
+
+@Composable
+fun BadgeBoxDemo(){
+
+}
+
+@Composable
+fun ButtonDemo(){
+
+}
+
+@Composable
 fun CardDemo(data: Datos){
     Card(
         shape = RoundedCornerShape(8.dp),
@@ -33,4 +48,74 @@ fun CardDemo(data: Datos){
 @Composable
 fun PreviewCardDemo(){
     CardDemo(data = Datos(R.drawable.img_widget,"Ejemplo 1", emptyList()))
+}
+
+@Composable
+fun CircularProgressIndicatorDemo(){
+
+}
+
+@Composable
+fun DropdownMenuDemo(){
+
+}
+
+@Composable
+fun CheckboxDemo(){
+
+}
+
+@Composable
+fun FloatingActionButtonDemo(){
+
+}
+
+@Composable
+fun LinearProgressIndicatorDemo(){
+
+}
+
+@Composable
+fun ModalDrawerLayoutDemo(){
+
+}
+
+@Composable
+fun RadioButtonDemo(){
+
+}
+
+@Composable
+fun ScaffoldDemo(){
+
+}
+
+@Composable
+fun SliderDemo(){
+
+}
+
+@Composable
+fun SnackbarDemo(){
+
+}
+
+@Composable
+fun SwitchDemo(){
+
+}
+
+@Composable
+fun SurfaceDemo(){
+
+}
+
+@Composable
+fun TextFieldDemo(){
+
+}
+
+@Composable
+fun TopAppBarDemo(){
+
 }
