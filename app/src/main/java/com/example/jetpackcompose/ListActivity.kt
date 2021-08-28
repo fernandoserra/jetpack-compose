@@ -1,11 +1,9 @@
 package com.example.jetpackcompose
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -19,14 +17,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.booleanResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpackcompose.data.Datos
-import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 
 val list= Datos()
 
@@ -49,7 +45,7 @@ class ListActivity : ComponentActivity() {
 }
 
 @Composable
-fun Card(dato: Datos, onDatosClick: (Datos) -> Unit){
+fun CardShow(dato: Datos, onDatosClick: (Datos) -> Unit){
 
     Surface(shape = RoundedCornerShape(8.dp), elevation = 8.dp,modifier = Modifier.padding(8.dp)  ) {
         //LinearLayout de orientacion vertical
@@ -80,7 +76,7 @@ fun ReciDataList(dataList:List<Datos>){
     val context = LocalContext.current
     LazyColumn(){
         items(dataList.size){ dat->
-           Card(dato = dataList[dat], onDatosClick = {
+           CardShow(dato = dataList[dat], onDatosClick = {
                Toast.makeText(context, "Elemento ${it}", Toast.LENGTH_LONG)
                    .show()
            })
@@ -92,5 +88,5 @@ fun ReciDataList(dataList:List<Datos>){
 @Preview
 @Composable
 fun Preview(){
-    Card(list,onDatosClick = {})
+    CardShow(list,onDatosClick = {})
 }
