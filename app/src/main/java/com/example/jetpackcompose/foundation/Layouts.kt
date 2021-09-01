@@ -89,8 +89,21 @@ fun PreviewRowDemo(){
     RowDemo()
 }
 
-
+/**
+ * Spacer es un Composable que se puede usar cuando desee agregar
+ * un espacio adicional entre Composables
+ * */
 @Composable
 fun SpacerDemo(){
+    Column {
+        Text(text = "Mensaje 1")
+        Spacer(modifier = Modifier.height(40.dp))
+        Text(text = "Mensaje 2")
+    }
+}
 
+@Preview (showBackground = true)
+@Composable
+fun PreviewSpacerDemo(){
+    SpacerDemo()
 }
