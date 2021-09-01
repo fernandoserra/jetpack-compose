@@ -22,9 +22,15 @@ import com.example.jetpackcompose.R
 @Composable
 fun BoxDemo(){
     //Box(Modifier.fillMaxSize().background(color = MaterialTheme.colors.background)) {
-    Box(Modifier.fillMaxSize().background(color = Color.Cyan)) {
+    Box(
+        Modifier
+            .fillMaxSize()
+            .background(color = Color.Cyan)) {
         Box(
-            Modifier.align(Alignment.TopCenter).size(180.dp, 300.dp).background( Color.Blue)
+            Modifier
+                .align(Alignment.TopCenter)
+                .size(180.dp, 300.dp)
+                .background(Color.Blue)
         )
         Text("Ejemplos con Box", modifier = Modifier.align(Alignment.Center), fontSize = 24.sp)
     }
@@ -41,10 +47,22 @@ fun BoxWithConstraintsDemo(){
 
 }
 
-
+/**
+ * Una columna mostrará a cada niño debajo de los niños anteriores.
+ * Es similar a LinearLayout con orientación vertical.
+ * */
 @Composable
 fun ColumnDemo(){
+    Column {
+        Text(text = "Mensaje 1", Modifier.padding(10.dp))
+        Text(text = "Mensaje 2", Modifier.padding(10.dp))
+    }
+}
 
+@Preview (showBackground = true)
+@Composable
+fun PreviewColumnDemo(){
+    ColumnDemo()
 }
 
 
