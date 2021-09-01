@@ -71,10 +71,22 @@ fun ConstraintLayoutDemo(){
 
 }
 
-
+/**
+ * Una fila mostrará a cada niño junto a los niños anteriores.
+ * Es similar a LinearLayout con orientación horizontal.
+ * */
 @Composable
 fun RowDemo(){
+    Row {
+       Text(text = "Mensaje 1", Modifier.padding(10.dp))
+       Text(text = "Mensaje 2", Modifier.padding(10.dp))
+    }
+}
 
+@Preview(showBackground = true)
+@Composable
+fun PreviewRowDemo(){
+    RowDemo()
 }
 
 
