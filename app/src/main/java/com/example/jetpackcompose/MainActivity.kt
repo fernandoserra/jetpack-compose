@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpackcompose.accompanist.Pager
 import com.example.jetpackcompose.accompanist.Pager2
+import com.example.jetpackcompose.demo.LazyColumnSticky
 import com.example.jetpackcompose.demo.MainContent
 import com.example.jetpackcompose.ui.theme.HorizontalScroll
 import com.example.jetpackcompose.ui.theme.HorizontalScrollImagen
@@ -29,13 +31,17 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 
 class MainActivity : ComponentActivity() {
 
+
+    @ExperimentalFoundationApi
     @ExperimentalAnimationApi
     @ExperimentalPagerApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
 
-            MainContent()
+            //MainContent()
+
+            LazyColumnSticky()
 
             //JetpackComposeTheme {
             //AppTheme {

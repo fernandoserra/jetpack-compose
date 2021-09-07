@@ -1,6 +1,5 @@
 package com.example.jetpackcompose.demo
 
-import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
@@ -17,7 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import java.util.*
@@ -26,7 +24,7 @@ import java.util.*
 @ExperimentalMaterialApi
 @ExperimentalAnimationApi
 @Composable
-fun MainContent(){
+fun MainContent2(){
     Box(
         Modifier
             .background(Color(0xFFEDEAE0))
@@ -40,26 +38,6 @@ fun MainContent(){
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             itemsIndexed(uuids) { index, item ->
-
-
-
-
-                val state = rememberDismissState(
-                    confirmStateChange = {
-                        if(it== DismissValue.DismissedToStart){
-
-                            uuids.remove(item)
-
-                           // Log.i("RvTeamsFavorites", "RvTeamsFavorites: ${dat}")
-                           // team.remove(team[dat])
-                           // Log.i("RvTeamsFavorites", "RvTeamsFavorites: ${team.size}")
-                        }
-                        true
-                    }
-                )
-
-
-                SwipeToDismiss(state = state , background ={},dismissContent = {
 
                     val visibility by remember {
                         mutableStateOf(
@@ -112,10 +90,6 @@ fun MainContent(){
                         }
                     }
 
-                }) //Fin SwipeToDismiss
-
-
-
             }
         }
 
@@ -129,13 +103,8 @@ fun MainContent(){
             backgroundColor = Color(0xFFFE4164)
         ) { Icon(Icons.Filled.Add,"") }
     }
+    
 }
 
 
-@ExperimentalMaterialApi
-@ExperimentalAnimationApi
-@Preview
-@Composable
-fun PreviewComposable(){
-    MainContent()
-}
+
