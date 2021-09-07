@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
@@ -20,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpackcompose.accompanist.Pager
 import com.example.jetpackcompose.accompanist.Pager2
+import com.example.jetpackcompose.demo.MainContent
 import com.example.jetpackcompose.ui.theme.HorizontalScroll
 import com.example.jetpackcompose.ui.theme.HorizontalScrollImagen
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
@@ -27,15 +29,19 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 
 class MainActivity : ComponentActivity() {
 
+    @ExperimentalAnimationApi
     @ExperimentalPagerApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+
+            MainContent()
+
             //JetpackComposeTheme {
             //AppTheme {
                 // A surface container using the 'background' color from the theme
                 //Surface(color = MaterialTheme.colors.background) {
-                    Column {
+                    /*Column {
                         /*Greeting("Android")
                         Divider(color = Color.Black)
                         Greeting("Android2")
@@ -57,7 +63,7 @@ class MainActivity : ComponentActivity() {
                         Divider(color = Color.Black)
                         ButtonRedirect()
 
-                     }
+                     }*/
                 //}
            // }
         }
