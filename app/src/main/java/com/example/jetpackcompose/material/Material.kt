@@ -1,4 +1,4 @@
-package com.example.jetpackcompose.foundation
+package com.example.jetpackcompose.material
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -47,7 +47,7 @@ fun PreviewButtonDemo(){
 fun CardDemo(data: Datos){
     Card(
         shape = RoundedCornerShape(8.dp),
-        modifier=Modifier
+        modifier= Modifier
             .fillMaxWidth()
             .padding(15.dp),
         elevation = 10.dp)
@@ -64,10 +64,23 @@ fun PreviewCardDemo(){
     CardDemo(data = Datos(R.drawable.img_widget,"Ejemplo 1", emptyList()))
 }
 
+/**
+ * Un CircularProgressIndicator se puede utilizar para mostrar un progreso en forma circular.
+ * Hay dos tipos: (Indeterminado,Determinado)
+ * */
+
 @Composable
 fun CircularProgressIndicatorDemo(){
-
+    CircularProgressIndicator()
+    //CircularProgressIndicator(progress = 0.5f)
 }
+
+@Preview (showBackground = true)
+@Composable
+fun PreviewCircularProgressIndicatedDemo(){
+    CircularProgressIndicatorDemo()
+}
+
 
 @Composable
 fun DropdownMenuDemo(){
