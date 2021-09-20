@@ -89,7 +89,17 @@ fun DropdownMenuDemo(){
 
 @Composable
 fun CheckboxDemo(){
+    val checkedState = remember { mutableStateOf(false) }
+    Checkbox(
+        checked = checkedState.value,
+        onCheckedChange = { checkedState.value = it }
+    )
+}
 
+@Preview
+@Composable
+fun CheckboxDemoPreview(){
+    CheckboxDemo()
 }
 
 @Composable
