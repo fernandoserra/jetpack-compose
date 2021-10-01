@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -75,9 +77,23 @@ fun PreviewAlertDialogDemo(){
     AlertDialogDemo();
 }
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun BadgeBoxDemo(){
+    BottomNavigation {
+        BottomNavigationItem(
+            icon = {
+                BadgeBox(badgeContent = { Text("8") }) {
+                    Icon(
+                        Icons.Filled.Favorite,
+                        contentDescription = "Favorite"
+                    )
+                }
 
+            },
+            selected = false,
+            onClick = {})
+    }
 }
 
 @Composable
