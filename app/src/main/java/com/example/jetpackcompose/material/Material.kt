@@ -89,11 +89,16 @@ fun BadgeBoxDemo(){
                         contentDescription = "Favorite"
                     )
                 }
-
             },
             selected = false,
             onClick = {})
     }
+}
+
+@Preview
+@Composable
+fun PreviewBadgeBoxDemo(){
+    BadgeBoxDemo()
 }
 
 @Composable
