@@ -69,6 +69,11 @@ fun AlertDialogDemo(){
         }
     }
 }
+@Preview
+@Composable
+fun PreviewAlertDialogDemo(){
+    AlertDialogDemo();
+}
 
 @Composable
 fun BadgeBoxDemo(){
