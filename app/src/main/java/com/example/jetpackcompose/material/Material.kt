@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.TextFieldValue
@@ -19,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcompose.R
 import com.example.jetpackcompose.data.Datos
+import kotlinx.coroutines.launch
 
 
 @Composable
@@ -212,7 +214,38 @@ fun PreviewLinearProgressIndicatorDemo(){
 
 @Composable
 fun ModalDrawerLayoutDemo(){
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val scope = rememberCoroutineScope()
 
+    ModalDrawer(
+        drawerState = drawerState,
+        drawerContent = {
+            Column {
+                Text("Text in Drawer")
+                Button(onClick = {
+                    scope.launch {
+                        drawerState.close()
+                    }
+                }) {
+                    Text("Close Drawer")
+                }
+            }
+        },
+        content = {
+            Column {
+                Text("Text in Bodycontext")
+                Button(onClick = {
+
+                    scope.launch {
+                        drawerState.open()
+                    }
+
+                }) {
+                    Text("Click to open")
+                }
+            }
+        }
+    )
 }
 
 /**
