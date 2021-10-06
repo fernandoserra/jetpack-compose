@@ -41,3 +41,8 @@ fun AnimationDemo(){
     }
 }
 
+@Preview
+@Composable
+fun PreviewAnimationDemo(){
+    AnimationDemo()
+}
