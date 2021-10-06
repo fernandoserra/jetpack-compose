@@ -248,6 +248,12 @@ fun ModalDrawerLayoutDemo(){
     )
 }
 
+@Preview
+@Composable
+fun PreviewModalDrawerLayoutDemo(){
+    ModalDrawerLayoutDemo()
+}
+
 /**
  * Los botones de radio permiten a los usuarios seleccionar una opción de un conjunto.
  * */
