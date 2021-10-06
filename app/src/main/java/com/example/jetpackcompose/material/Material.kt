@@ -186,6 +186,12 @@ fun FloatingActionButtonDemo(){
     )
 }
 
+@Preview
+@Composable
+fun PreviewFloatingActionButtonDemo(){
+    FloatingActionButtonDemo()
+}
+
 /**
  * Un LinearProgressIndicator se puede utilizar para mostrar un progreso en línea lineal, también conocida como barra de progreso.
  * Hay dos tipos:
