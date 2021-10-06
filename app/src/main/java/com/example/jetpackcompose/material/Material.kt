@@ -178,7 +178,12 @@ fun CheckboxDemoPreview(){
 
 @Composable
 fun FloatingActionButtonDemo(){
-
+    ExtendedFloatingActionButton(
+        icon = { Icon(Icons.Filled.Favorite,"") },
+        text = { Text("FloatingActionButton") },
+        onClick = { /*do something*/ },
+        elevation = FloatingActionButtonDefaults.elevation(8.dp)
+    )
 }
 
 /**
