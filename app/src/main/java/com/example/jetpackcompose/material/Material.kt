@@ -341,7 +341,11 @@ fun PreviewSnackbarDemo(){
 
 @Composable
 fun SwitchDemo(){
-
+    val checkedState = remember { mutableStateOf(true) }
+    Switch(
+        checked = checkedState.value,
+        onCheckedChange = { checkedState.value = it }
+    )
 }
 
 @Composable
