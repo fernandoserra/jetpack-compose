@@ -301,6 +301,12 @@ fun SliderDemo(){
     Slider(value = sliderPosition, onValueChange = { sliderPosition = it })
 }
 
+@Preview
+@Composable
+fun PreviewSliderDemo(){
+    SliderDemo()
+}
+
 @Composable
 fun SnackbarDemo(){
 
