@@ -309,7 +309,28 @@ fun PreviewSliderDemo(){
 
 @Composable
 fun SnackbarDemo(){
+    Column {
+        val (snackbarVisibleState, setSnackBarState) = remember { mutableStateOf(false) }
 
+        Button(onClick = { setSnackBarState(!snackbarVisibleState) }) {
+            if (snackbarVisibleState) {
+                Text("Hide Snackbar")
+            } else {
+                Text("Show Snackbar")
+            }
+        }
+        if (snackbarVisibleState) {
+            Snackbar(
+
+                action = {
+                    Button(onClick = {}) {
+                        Text("MyAction")
+                    }
+                },
+                modifier = Modifier.padding(8.dp)
+            ) { Text(text = "This is a snackbar!") }
+        }
+    }
 }
 
 @Composable
