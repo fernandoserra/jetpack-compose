@@ -333,6 +333,12 @@ fun SnackbarDemo(){
     }
 }
 
+@Preview
+@Composable
+fun PreviewSnackbarDemo(){
+    SnackbarDemo()
+}
+
 @Composable
 fun SwitchDemo(){
 
