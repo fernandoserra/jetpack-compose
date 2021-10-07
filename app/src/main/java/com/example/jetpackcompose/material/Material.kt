@@ -348,6 +348,12 @@ fun SwitchDemo(){
     )
 }
 
+@Preview
+@Composable
+fun PreviewSwitchDemo(){
+    SwitchDemo()
+}
+
 @Composable
 fun SurfaceDemo(){
 
