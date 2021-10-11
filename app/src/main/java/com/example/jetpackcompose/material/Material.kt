@@ -386,7 +386,7 @@ fun TopAppBarDemo(){
         TopAppBar(
             elevation = 4.dp,
             title = {
-                Text("I'm a TopAppBar")
+                Text("Demo TopBar")
             },
             backgroundColor =  MaterialTheme.colors.primarySurface,
             navigationIcon = {
