@@ -406,3 +406,8 @@ fun TopAppBarDemo(){
 
     }
 }
+@Preview
+@Composable
+fun PreviewTopAppBarDemo(){
+    TopAppBarDemo()
+}
