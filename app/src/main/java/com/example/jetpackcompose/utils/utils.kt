@@ -11,7 +11,6 @@ import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.example.jetpackcompose.R
 
-
 @Composable
 fun LoadImageUrl(url: String?, placeholder: Int = R.mipmap.ic_launcher): MutableState<Bitmap?>  {
 
@@ -51,6 +50,3 @@ fun LoadImageUrl(url: String?, placeholder: Int = R.mipmap.ic_launcher): Mutable
 
     return bitmapState
 }
-
-
-
