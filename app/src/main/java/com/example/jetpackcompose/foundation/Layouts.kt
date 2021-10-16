@@ -11,7 +11,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
 /**
  * Los elementos secundarios del diseño de Box se apilarán unos sobre otros.
  * Puede utilizar el modificador de alineación para especificar dónde se debe dibujar el componible.
