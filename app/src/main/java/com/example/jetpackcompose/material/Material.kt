@@ -72,6 +72,7 @@ fun AlertDialogDemo(){
         }
     }
 }
+
 @Preview
 @Composable
 fun PreviewAlertDialogDemo(){
@@ -117,7 +118,6 @@ fun PreviewButtonDemo(){
     ButtonDemo()
 }
 
-
 @Composable
 fun CardDemo(data: Datos){
     Card(
@@ -158,7 +158,6 @@ fun PreviewCircularProgressIndicatedDemo(){
 
 @Composable
 fun DropdownMenuDemo(){
-
 }
 
 @Composable
@@ -324,7 +323,6 @@ fun SnackbarDemo(){
         }
         if (snackbarVisibleState) {
             Snackbar(
-
                 action = {
                     Button(onClick = {}) {
                         Text("MyAction")
@@ -403,7 +401,6 @@ fun TopAppBarDemo(){
             })
 
         Text("Hello World")
-
     }
 }
 @Preview
