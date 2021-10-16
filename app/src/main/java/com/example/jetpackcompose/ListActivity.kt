@@ -35,12 +35,9 @@ class ListActivity : ComponentActivity() {
                     Text(text = "Listado ")
                 }
                 Divider(color = Color.Black)
-
                 ReciDataList(dataList = list.listData())
             }
-
         }
-
     }
 }
 
