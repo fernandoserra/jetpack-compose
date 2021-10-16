@@ -9,7 +9,10 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.*
+import androidx.compose.material.Button
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -17,18 +20,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpackcompose.accompanist.Pager
-import com.example.jetpackcompose.accompanist.Pager2
-import com.example.jetpackcompose.demo.LazyColumnSticky
 import com.example.jetpackcompose.demo.MainContent
-import com.example.jetpackcompose.demo.ShowList
-import com.example.jetpackcompose.ui.theme.HorizontalScroll
-import com.example.jetpackcompose.ui.theme.HorizontalScrollImagen
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 import com.google.accompanist.pager.ExperimentalPagerApi
 
 class MainActivity : ComponentActivity() {
-
 
     @ExperimentalMaterialApi
     @ExperimentalFoundationApi
@@ -41,7 +37,6 @@ class MainActivity : ComponentActivity() {
             MainContent()
 
             //LazyColumnSticky()
-
             //ShowList()
 
             //JetpackComposeTheme {
@@ -59,14 +54,12 @@ class MainActivity : ComponentActivity() {
                         Divider(color = Color.Black)
                         ButtonRedirect()
 
-
                         //HorizontalScroll()
                         //Pager()
                         Divider(color = Color.Black)*/
                         //Pager2()
 
                         //HorizontalScrollImagen()
-
                         Divider(color = Color.Black)
                         ButtonRedirect()
 
@@ -80,7 +73,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!", Modifier.padding(24.dp))
-
 }
 
 @Preview(name="Default",showBackground = true)
@@ -134,7 +126,6 @@ fun AppTheme(content:@Composable() () ->Unit){
             Column() {
                 content()
             }
-
         }
     }
 }
