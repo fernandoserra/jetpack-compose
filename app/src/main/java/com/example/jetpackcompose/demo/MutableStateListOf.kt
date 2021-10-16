@@ -21,7 +21,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import java.util.*
 
-
 @ExperimentalMaterialApi
 @ExperimentalAnimationApi
 @Composable
@@ -40,13 +39,9 @@ fun MainContent(){
         ) {
             itemsIndexed(uuids) { index, item ->
 
-
-
-
                 val state = rememberDismissState(
                     confirmStateChange = {
                         if(it== DismissValue.DismissedToStart){
-
                             uuids.remove(item)
 
                            // Log.i("RvTeamsFavorites", "RvTeamsFavorites: ${dat}")
@@ -112,8 +107,6 @@ fun MainContent(){
                     }
 
                 }) //Fin SwipeToDismiss
-
-
 
             }
         }
