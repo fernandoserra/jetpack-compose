@@ -308,6 +308,12 @@ fun ScaffoldDemo(){
     )
 }
 
+@Preview
+@Composable
+fun PreviewScaffoldDemo(){
+    ScaffoldDemo()
+}
+
 @Composable
 fun SliderDemo(){
     var sliderPosition by remember { mutableStateOf(0f) }
