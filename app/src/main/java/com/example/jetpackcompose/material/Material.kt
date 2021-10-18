@@ -388,6 +388,12 @@ fun SurfaceDemo(){
     }
 }
 
+@Preview
+@Composable
+fun PreviewSurfaceDemo(){
+    SurfaceDemo()
+}
+
 @Composable
 fun TextFieldDemo(){
     Column(Modifier.padding(16.dp)) {
