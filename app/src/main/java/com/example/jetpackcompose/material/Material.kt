@@ -384,7 +384,7 @@ fun SurfaceDemo(){
         elevation = 8.dp,
         shape = CircleShape
     ) {
-        Text("Hello World", modifier = Modifier.padding(8.dp))
+        Text("Demo Surface", modifier = Modifier.padding(8.dp))
     }
 }
 
