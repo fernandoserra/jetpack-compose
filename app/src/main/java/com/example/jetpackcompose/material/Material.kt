@@ -1,10 +1,12 @@
 package com.example.jetpackcompose.material
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -375,7 +377,15 @@ fun PreviewSwitchDemo(){
 
 @Composable
 fun SurfaceDemo(){
-
+    Surface(
+        modifier = Modifier.padding(8.dp),
+        border = BorderStroke(2.dp, Color.Red),
+        contentColor = Color.Blue,
+        elevation = 8.dp,
+        shape = CircleShape
+    ) {
+        Text("Hello World", modifier = Modifier.padding(8.dp))
+    }
 }
 
 @Composable
