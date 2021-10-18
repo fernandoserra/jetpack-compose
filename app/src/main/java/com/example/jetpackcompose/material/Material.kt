@@ -330,7 +330,7 @@ fun PreviewSliderDemo(){
 }
 
 @Composable
-fun SnackbarDemo(){
+fun SnackBarDemo(){
     Column {
         val (snackbarVisibleState, setSnackBarState) = remember { mutableStateOf(false) }
 
@@ -357,7 +357,7 @@ fun SnackbarDemo(){
 @Preview
 @Composable
 fun PreviewSnackbarDemo(){
-    SnackbarDemo()
+    SnackBarDemo()
 }
 
 @Composable
